@@ -1,16 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   let location = useLocation();
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location]);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" href="/">
           iNoteBook
         </Link>
         <button
@@ -32,7 +29,7 @@ const Navbar = () => {
                   location.pathname === "/" ? "active" : ""
                 }`}
                 aria-current="page"
-                to="/"
+                href="/"
               >
                 Home
               </Link>
@@ -42,13 +39,13 @@ const Navbar = () => {
                 className={`nav-link ${
                   location.pathname === "/about" ? "active" : ""
                 }`}
-                to="/about"
+                href="/about"
               >
                 About
               </Link>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex">
             <input
               className="form-control me-2"
               type="search"

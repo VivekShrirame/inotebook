@@ -12,7 +12,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
-          <Alert message="Note Deleted" />
+          <Alert message="Learning Mern" />
           <div className="container">
             <Routes>
               <Route exact path="/" element={<Home />} />
